@@ -19,6 +19,11 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Debug File System
+        run: ls -R
+
       - name: Run Playwright Tests
         run: npx playwright test test/e2e
+
+
 
