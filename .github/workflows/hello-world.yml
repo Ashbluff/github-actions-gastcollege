@@ -18,9 +18,14 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
+  test:
         name: Run PHPStan
         run: vendor/bin/phpstan analyse
+
+  laravel:
         name: Run Laravel Pint
         run: vendor/bin/pint
+
+  playwright:      
         name: Run Playwright
         run: npx playwright test
