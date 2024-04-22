@@ -18,7 +18,7 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-      - name: bs
+      - name: playwright install
         run: npx playwright install
 
       - name: Install playwright Dependencies
