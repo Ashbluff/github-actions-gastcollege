@@ -33,22 +33,22 @@ jobs:
         - name: Start Development Container
           run: bash .devcontainer/start-container.sh
 
-              - name: Install phpstan
-        run: composer install
+        - name: Install phpstan
+          run: composer install
 
-      - name: Install phpstan
-        run: composer require --dev phpstan/phpstan
+        - name: Install phpstan
+          run: composer require --dev phpstan/phpstan
 
-      - name: Install Laravel pint
-        run: composer require laravel/pint --dev
-      - name: Install phpstan
-        run: composer install
+        - name: Install Laravel pint
+          run: composer require laravel/pint --dev
+        - name: Install phpstan
+          run: composer install
 
-      - name: Install phpstan
-        run: composer require --dev phpstan/phpstan
+        - name: Install phpstan
+          run: composer require --dev phpstan/phpstan
 
-      - name: Install Laravel pint
-        run: composer require laravel/pint --dev
+        - name: Install Laravel pint
+          run: composer require laravel/pint --dev
 
 
         - name: Install Dependencies
