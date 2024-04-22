@@ -33,7 +33,23 @@ jobs:
         - name: Start Development Container
           run: bash .devcontainer/start-container.sh
 
-        
+              - name: Install phpstan
+        run: composer install
+
+      - name: Install phpstan
+        run: composer require --dev phpstan/phpstan
+
+      - name: Install Laravel pint
+        run: composer require laravel/pint --dev
+      - name: Install phpstan
+        run: composer install
+
+      - name: Install phpstan
+        run: composer require --dev phpstan/phpstan
+
+      - name: Install Laravel pint
+        run: composer require laravel/pint --dev
+
 
         - name: Install Dependencies
           run: npm install
@@ -53,3 +69,9 @@ jobs:
 
         - name: Run Playwright Tests
           run: npx playwright test tests/e2e
+
+        - name: Run Laravel Pint
+          run: vendor/bin/pint
+
+        - name: Run PHPStan
+          run: vendor/bin/phpstan analyse
