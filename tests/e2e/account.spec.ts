@@ -30,5 +30,5 @@ test('Can register, logout and login', async ({ page }) => {
     await page.fill('input[name="password"]', 'password');
 
     await page.getByRole('button', { name: 'Log In' }).click();
-    expect(page.url()).toContain('/dashboard');
+    expect(page.url()).toContain('/dashboard');//test
 });
