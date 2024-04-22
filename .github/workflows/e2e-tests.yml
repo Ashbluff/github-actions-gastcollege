@@ -21,6 +21,9 @@ jobs:
       - name: bs
         run: npx playwright install
 
+      - name: Install playwright Dependencies
+        run: npx playwright install-deps
+
       - name: Debug File System
         run: ls -al && ls -al tests && ls -al tests/e2e
 
