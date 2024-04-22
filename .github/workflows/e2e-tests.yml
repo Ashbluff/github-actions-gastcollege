@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Debug File System
-        run: ls -R
+        run: ls -al && ls -al tests && ls -al tests/e2e
 
       - name: Run Playwright Tests
         run: npx playwright test tests/e2e/account.spec.ts
